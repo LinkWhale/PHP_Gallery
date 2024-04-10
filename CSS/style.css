@@ -1,0 +1,30 @@
+
+/*Website should look like a scuffed virus giving site*/
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-image: url('../background.jpg');
+    background-size: cover;
+}
+
+.Gallery {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 15vh;
+    left: 0;
+}
+
+.gallery_item {
+    width: 20%;
+    margin: 1em;
+}
+
+@media only screen and (max-width: 800px) {
+    .gallery_item {
+        width: 40%;
+        margin: 1em;
+    }
+}
