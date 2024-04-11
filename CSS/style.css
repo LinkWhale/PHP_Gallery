@@ -6,20 +6,23 @@ body {
     background-image: url('../background.jpg');
     background-size: cover;
 }
+img {
+    border:5px solid black;
+}
 
 .Gallery {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
-    position: absolute;
-    top: 15vh;
-    left: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .gallery_item {
-    width: 20%;
     margin: 1em;
+height: 20em;
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -27,4 +30,43 @@ body {
         width: 40%;
         margin: 1em;
     }
+}
+
+/*Upload.php style*/
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    position: absolute;
+    top: 10%;
+    left: 0;
+}
+
+a > img {
+    width: 5%;
+}
+
+input {
+    width: fit-content;
+    margin: 1em;
+    background-color: orange;   
+    padding: 0.3em;
+    font-size: 2em;
+    border: 5px solid black;
+}
+
+@media only screen and (max-width: 800px) {
+    a > img {
+        width: 10%;
+    }
+    input {
+    width: fit-content;
+    margin: 1em;
+    background-color: orange;
+    padding: 0.3em;
+    font-size: 1.2em;
+}
 }

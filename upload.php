@@ -6,45 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <style>
-        form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            width: 100vw;
-            position: absolute;
-            top: 10%;
-            left: 0;
-        }
+        
         body {
             text-align: left;
         }
-        a > img {
-            width: 5%;
-        }
-
-        input {
-            width: fit-content;
-            margin: 1em;
-            background-color: orange;   
-            padding: 0.3em;
-            font-size: 2em;
-        }
-
-        @media only screen and (max-width: 800px) {
-            a > img {
-                width: 10%;
-            }
-            input {
-            width: fit-content;
-            margin: 1em;
-            background-color: orange;
-            padding: 0.3em;
-            font-size: 1.2em;
-        }
-        }
-       
+      
     </style>
 </head>
 <body>
@@ -84,6 +50,7 @@ if(isset($_POST["submit"])) {
 
             if($uploadOk == 1) {
                 move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
+                echo $target_file;
                 echo "<img src=".$target_file." width=300>";
             }
         }
